@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md p-6 bg-white rounded-xl shadow-md">
+        <h1 class="text-2xl font-bold text-center mb-4">Consulta de CEP</h1>
+        
+        <div class="flex mb-4">
+            <input id="cepInput" type="text" placeholder="Digite o CEP" maxlength="8"
+                   class="flex-1 px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <button id="searchBtn" class="bg-blue-500 text-white px-4 py-2 rounded-r-md hover:bg-blue-600">
+                Buscar
+            </button>
+        </div>
+
+        <div id="loader" class="text-center my-4 hidden">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+        </div>
+
+        <div id="result"></div>
+        <div id="error" class="text-red-500 text-center mt-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
